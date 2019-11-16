@@ -32,8 +32,11 @@ main {
   position: relative;
   overflow: hidden;
   background-color: hsl(220deg, 30%, 80%);
+  transition: width 250ms ease, letter-spacing 750ms ease-out;
 }
-
+.card:hover{
+  letter-spacing: 0.1em;
+}
 .name {
   font-size: 1rem;
   padding: 0.5rem 1rem;
@@ -42,25 +45,49 @@ main {
   text-align: center;
 }
 
+.card:hover .name{
+    transform: translateY(166px);
+}
+
 .avatar {
   text-align: center;
   padding: 0.5rem;
 }
-
+.card:hover .avatar{
+  transform: translateY(-35px);
+}
 .avatar img {
   border: 0.25rem solid hsl(80deg, 50%, 70%);
   border-radius: 50%;
+  transition-property: border;
+  transition-delay: 0.4s;
 }
 
+.card:hover .avatar img{
+  border: 0.30rem solid hsl(220deg, 50%, 60%);
+}
 .contact {
   font-size: 0.6rem;
   padding: 0.5rem 1rem;
   color: hsl(220deg, 30%, 50%);
 }
 
-.email {}
+.email{
+  transition-property: font-weight;
+  transition-delay: 5s;
+}
+.card:hover .email {
+  font-weight: 600;
+}
 
-.cell {}
+.cell {
+  transition-property: all;
+  transition-delay: 0.7s
+}
+.card:hover .cell{
+  letter-spacing: 0.3em;
+  font-weight: 800;
+}
 
 .avatars {
   display: flex;
